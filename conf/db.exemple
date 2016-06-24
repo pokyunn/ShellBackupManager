@@ -1,0 +1,11 @@
+# Não utilize o bloco de notas do windows neste arquivo
+# Este arquivo deve estar formatado com LF, modelo Unix
+# Configurações do servidor mysql
+#
+db_user=root
+db_pass=xxx
+db_ip=10.5.70.129
+db_type=dev
+db_databases=seguranca,cap
+db_save_path=/srv/backup-dados/
+db_copy_path=false

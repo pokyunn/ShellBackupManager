@@ -1,0 +1,13 @@
+# Não utilize o bloco de notas do windows neste arquivo
+# Este arquivo deve estar formatado com LF, modelo Unix
+# Arquivo de configuração das variveis do gerenciador
+#
+cfg_dir_db_work_name="$(date +'BKP_DB_%Y-%m-%d')"
+cfg_disk_usage=90
+cfg_backup_status=OK
+#
+cfg_mail_subject=" Relatório de backup "
+cfg_mail_user=email@servico.backup
+cfg_mail_pass=senha
+cfg_mail_smtp="smp.servidor.com:porta"
+cfg_mail_receivers="usuario1@email.com,usuario2@email.com"
