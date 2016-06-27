@@ -40,9 +40,9 @@ function fnLogger(){
 }
 
 function fnSendMail(){
-  log_file=`cat $DIR/../tmp/log.txt`
+  log_file="$( cat $DIR/../tmp/log.txt )"
 
-  echo "${log_file}" | mailx -v \
+  echo "$log_file" | mailx -v \
    -r $cfg_mail_user \
    -s "$cfg_mail_subject - $cfg_dir_db_work_name" \
    -S smtp=$cfg_mail_smtp \

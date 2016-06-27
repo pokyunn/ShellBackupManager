@@ -15,8 +15,11 @@ fnLogger "Log do gerador de backup do servidor: $(hostname)"
 
 case "$1" in
   "mysql")
-    fnMakeMysqlDump $2
-    fnSendMail
+  for db_file in ${2//[$'\t\r\n ,']/ }
+  do
+    fnMakeMysqlDump $db_file
+  done
+  fnSendMail
   ;;
 esac
 
