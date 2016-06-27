@@ -16,5 +16,5 @@ $ crontab -e
 ....
 # crontab do root
 # minuto hora dia mes diaSemana  comando
-     0     0   *   *    0-5      /srv/backup-dados/GeradorBackupLinux/scripts/controller.sh mysql db.teste.cfg,db.teste2.cfg
+     0     0   *   *    0-5      /srv/backup-dados/ShellBackupManager/scripts/controller.sh mysql db.teste.cfg,db.teste2.cfg
 ```
