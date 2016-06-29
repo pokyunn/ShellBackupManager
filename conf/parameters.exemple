@@ -4,6 +4,7 @@
 #
 cfg_dir_db_work_name="$(date +'BKP_DB_%Y-%m-%d')"
 cfg_disk_usage=90
+cfg_disk_path=/dive/de/armazenamento
 cfg_backup_status=OK
 #
 cfg_mail_subject=" Relatório de backup "

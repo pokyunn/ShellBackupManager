@@ -53,3 +53,15 @@ function fnSendMail(){
    -S ssl-verify=ignore \
    ${cfg_mail_receivers//[$'\t\r\n ,']/ }
 }
+
+# Função da calcular o uso do disco
+fnVerificaDisco() {
+  sed -i "2i #" $DIR/../tmp/log.txt
+
+	aux=( $( df -h $cfg_disk_path | awk '{print $5}' ) )
+  sed -i "3i Uso do disco ${aux[1]}" $DIR/../tmp/log.txt
+
+	if [ ${aux[1]//[$'%']/} -gt $cfg_disk_usage ]; then
+      sed -i "3i Disco cheio" $DIR/../tmp/log.txt
+	fi
+}

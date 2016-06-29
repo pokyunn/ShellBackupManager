@@ -19,9 +19,14 @@ case "$1" in
   do
     fnMakeMysqlDump $db_file
   done
-  fnSendMail
   ;;
 esac
+
+# Verifica os espaço utilizado do disco
+fnVerificaDisco $cfg_disk_path
+
+# Envia o email com o log
+fnSendMail
 
 # Limpa o diretorio temporario
 rm -rfv $DIR/../tmp/*
