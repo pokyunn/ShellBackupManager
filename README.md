@@ -5,7 +5,7 @@
 Dependencias Ubuntu:
 
 ```sh
-$ apt-get install mysql-client heirloom-mailx
+$ apt-get install mysql-client heirloom-mailx rar unrar
 ```
 
 No diretório "conf" são armazenados os arquivos texto com a configuração dos backups
