@@ -1,5 +1,7 @@
 #!/bin/bash
 echo "Iniciando..."
+scriptStartTime=$(date +%s)
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo "Lendo arquivos de configuração..."
@@ -32,6 +34,10 @@ esac
 
 # Verifica os espaço utilizado do disco
 fnVerificaDisco $cfg_disk_path
+
+scriptEndTime=$(date +%s)
+tempo=$(date -d @$(expr 10800 + $(expr $scriptEndTime - $scriptStartTime) ) +%Hh:%Mm:%Ss)
+sed -i "2i Tempo gasto: $tempo " $DIR/../tmp/log.txt
 
 # Envia o email com o log
 fnSendMail
