@@ -1,0 +1,11 @@
+# Não utilize o bloco de notas do windows neste arquivo
+# Este arquivo deve estar formatado com LF, modelo Unix
+# Configurações do servidor mysql
+#
+fl_user=root
+fl_ip=10.5.70.15
+fl_type=teste
+fl_base_path=/caminho/do/diretorio/base
+fl_folder_list=pasta1,pasta2
+fl_save_path=/destino/do/arquivo/de/backup
+fl_copy_path=false
