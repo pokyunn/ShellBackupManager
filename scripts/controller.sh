@@ -8,7 +8,7 @@ echo "Lendo arquivos de configuração..."
 source $DIR/../conf/parameters.cfg
 source $DIR/../scripts/functions.sh
 
-if [ ! -d "$DIR/../tmp" ];then
+if [ ! -d "$DIR/../tmp" ]; then
   mkdir $DIR/../tmp
 fi
 
@@ -18,15 +18,13 @@ fnLogger "Log do gerador de backup do servidor: $(hostname)"
 case "$1" in
   "mysql")
   fnLogger "## Bakup de banco de dados"
-  for db_file in ${2//[$'\t\r\n ,']/ }
-  do
+  for db_file in ${2//[$'\t\r\n ,']/ }; do
     fnMakeMysqlDump $db_file
   done
   ;;
   "files")
   fnLogger "## Bakup de arquivos"
-  for fl_file in ${2//[$'\t\r\n ,']/ }
-  do
+  for fl_file in ${2//[$'\t\r\n ,']/ }; do
     fnMakeBackupFiles $fl_file
   done
   ;;
