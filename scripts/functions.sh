@@ -28,7 +28,7 @@ function fnMakeMysqlDump(){
   # Compacta a pasta de trabalho, diretamente na pasta de destino
   echo $(cd $DIR/../tmp && rar a -r $db_save_path/$cfg_dir_db_work_name.rar $cfg_dir_db_work_name)
 
-  if [ -e -d $db_copy_to_path ]; then
+  if [ -d $db_copy_to_path ]; then
     cp -v $db_save_path/$cfg_dir_db_work_name.rar "${db_copy_path}"
   fi
 }
